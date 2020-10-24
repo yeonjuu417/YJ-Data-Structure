@@ -1,0 +1,36 @@
+{
+  "name": "data-structure",
+  "version": "1.0.0",
+  "description": "Codestates Immersive Course Sprint",
+  "scripts": {
+    "test": "jest",
+    "test:part1": "jest part-1/",
+    "test:part2": "jest part-2/__test__/index.test.js",
+    "test:part3": "jest part-3/__test__/index.test.js",
+    "precommit": "lint-staged",
+    "lint": "eslint **/*.js --quiet",
+    "submit": "node .travis/submit.js"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "node_modules/",
+      "**/__test__/*.js"
+    ]
+  },
+  "author": "Codestates",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "husky": "^0.14.3",
+    "jest": "^24.9.0",
+    "lint-staged": "^7.3.0",
+    "underscore": "^1.10.2"
+  }
+}
